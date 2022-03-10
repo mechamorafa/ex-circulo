@@ -1,11 +1,12 @@
 public class Circulo {
-    
+   //dry =- don't repeat yourself
+   //kis = keep it simple 
+   
     private Ponto centro;
     private double raio;
 
     public Circulo() {
-        this.centro = new Ponto();
-        this.raio = 1;
+        this( 0, 0, 1);
      }
 
     public Circulo (double umX, double umY, double raio){
@@ -14,7 +15,7 @@ public class Circulo {
     }
 
     public void move (double novoX, double novoY){
-        this.centro = new Ponto(novoX, novoY);
+        centro.move(novoX, novoY);
     }
 
     public void zoom (double fator){
